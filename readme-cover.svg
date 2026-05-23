@@ -317,7 +317,61 @@
               <div class="pill">Figma Prototyping</div>
             </div>
           </div>
-      
+
+          <div class="section-header">🎯 Interactive Focus Matrix</div>
+        </div>
+
+        <div class="focus-matrix">
+          
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">My Writing</div>
+              <div class="quad-tag">Read</div>
+            </div>
+            <p class="quad-desc">Documenting insights about full-stack engineering, secure backend development architecture, and optimized query mapping pipelines.</p>
+            <div class="quad-top">
+              <div class="brand-display">DEV</div>
+              <div class="tech-string">React // Node.js</div>
+            </div>
+          </div>
+
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">A11y Monsters</div>
+              <div class="quad-tag">Study</div>
+            </div>
+            <p class="quad-desc">Collaborative engineering cohorts built to accelerate technical fluency from groundwork fundamentals right up to production deployment benchmarks.</p>
+            <div class="quad-top">
+              <div class="brand-display">👾👾</div>
+              <div class="tech-string">FastAPI // Python</div>
+            </div>
+          </div>
+
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">WCAG 101</div>
+              <div class="quad-tag">Learn</div>
+            </div>
+            <p class="quad-desc">Demystifying compliance standards, implementing clean accessibility trees, semantic structural layouts, and high-quality validation rules.</p>
+            <div class="quad-top">
+              <div class="brand-display">w3c 101</div>
+              <div class="tech-string">PostgreSQL // SQL</div>
+            </div>
+          </div>
+
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">totally1y.dev</div>
+              <div class="quad-tag">Grow</div>
+            </div>
+            <p class="quad-desc">Production system scaling solutions providing automated evaluation metrics, actionable audit feedback tools, and continuous integration diagnostics.</p>
+            <div class="quad-top">
+              <div class="brand-display">tota11y.dev</div>
+              <div class="tech-string">Docker // AWS</div>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </div>
