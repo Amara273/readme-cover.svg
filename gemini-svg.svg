@@ -1,0 +1,379 @@
+<svg fill="none" viewBox="0 0 900 1320" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        /* Neon Cyberpunk Theme Styles */
+        .container {
+          background-color: #0d0e15;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+          color: #ffffff;
+          padding: 30px;
+          box-sizing: border-box;
+          border-radius: 12px;
+          border: 1px solid #1f2030;
+          height: 1320px;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation Badges */
+        .nav-bar {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 30px;
+          flex-wrap: wrap;
+        }
+        .nav-btn {
+          border: 1.5px solid #d31372;
+          background: rgba(211, 19, 114, 0.05);
+          color: #ff63b4;
+          padding: 8px 18px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          box-shadow: 0 0 8px rgba(211, 19, 114, 0.1);
+        }
+
+        /* Hero Wrapper */
+        .hero {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+          background: linear-gradient(135deg, #161224 0%, #0d0e15 100%);
+          border: 1px solid #2d1230;
+          padding: 30px;
+          border-radius: 12px;
+          margin-bottom: 30px;
+          position: relative;
+        }
+        .hero-left { flex: 2; }
+        .hero-right { 
+          flex: 1; 
+          text-align: center;
+          position: relative;
+        }
+
+        /* Speech Bubble implementation from reference */
+        .speech-bubble {
+          position: absolute;
+          top: -45px;
+          right: 20px;
+          background: #0d0e15;
+          border: 2px solid #ff63b4;
+          border-radius: 12px;
+          padding: 8px 12px;
+          font-size: 12px;
+          color: #ff63b4;
+          font-weight: 600;
+          max-width: 160px;
+          box-shadow: 0 0 10px rgba(211, 19, 114, 0.3);
+        }
+        .speech-bubble::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          right: 40px;
+          border-width: 8px 8px 0;
+          border-style: solid;
+          border-color: #ff63b4 transparent;
+          display: block;
+          width: 0;
+        }
+
+        .avatar-glow {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          border: 3px solid #ff63b4;
+          box-shadow: 0 0 20px #d31372, inset 0 0 15px #d31372;
+          object-fit: cover;
+          margin-top: 25px;
+        }
+
+        .status-badge {
+          display: inline-block;
+          background: rgba(0, 230, 118, 0.1);
+          border: 1px solid #00e676;
+          color: #00e676;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 600;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        h1 {
+          font-size: 32px;
+          margin: 0 0 10px 0;
+          font-weight: 800;
+        }
+        h1 span { color: #ff63b4; text-shadow: 0 0 10px rgba(211, 19, 114, 0.5); }
+        
+        .tagline {
+          color: #9fa4dd;
+          font-size: 16px;
+          margin: 0 0 15px 0;
+          font-weight: 500;
+        }
+        .desc {
+          color: #b4b9e6;
+          font-size: 14px;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        /* Metrics Tracker Grid */
+        .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 15px;
+          margin-top: 25px;
+        }
+        .stat-card {
+          background: #131420;
+          border: 1px solid #1f223d;
+          padding: 12px;
+          border-radius: 8px;
+          text-align: center;
+        }
+        .stat-val {
+          font-size: 20px;
+          font-weight: 800;
+          color: #ff63b4;
+        }
+        .stat-lbl {
+          font-size: 11px;
+          color: #7d84b2;
+          text-transform: uppercase;
+          margin-top: 4px;
+          letter-spacing: 0.5px;
+        }
+
+        /* Main Structured Portfolio Layout Matrix */
+        .portfolio-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          margin-bottom: 25px;
+        }
+        .section-header {
+          grid-column: span 2;
+          font-size: 18px;
+          font-weight: 700;
+          color: #ff63b4;
+          margin: 15px 0 5px 0;
+          border-bottom: 1px solid #2d1230;
+          padding-bottom: 8px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .skills-container {
+          grid-column: span 2;
+          background: #11121a;
+          border: 1px solid #1f223d;
+          padding: 20px;
+          border-radius: 10px;
+        }
+        .pill-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 10px;
+        }
+        .pill {
+          background: #191b2a;
+          border: 1px solid #2a2e4e;
+          padding: 6px 12px;
+          border-radius: 6px;
+          font-size: 12px;
+          color: #b4b9e6;
+          font-weight: 500;
+        }
+
+        /* Reference-Matching 4-Quadrant Focus Layout */
+        .focus-matrix {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          background: #11121a;
+          border: 1px solid #2d1230;
+          border-radius: 12px;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        /* Crosshairs line dividers matching original screenshot */
+        .focus-matrix::before {
+          content: '';
+          position: absolute;
+          top: 0; bottom: 0; left: 50%;
+          width: 1px;
+          background: #2d1230;
+          z-index: 1;
+        }
+        .focus-matrix::after {
+          content: '';
+          position: absolute;
+          left: 0; right: 0; top: 50%;
+          height: 1px;
+          background: #2d1230;
+          z-index: 1;
+        }
+
+        .quadrant {
+          padding: 25px;
+          position: relative;
+          min-height: 180px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        
+        .quad-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 10px;
+        }
+
+        .quad-title {
+          font-size: 20px;
+          font-weight: 700;
+          color: #ffffff;
+        }
+        
+        .quad-tag {
+          border: 1px solid #ff63b4;
+          color: #ff63b4;
+          padding: 2px 10px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        .quad-desc {
+          font-size: 13px;
+          color: #b4b9e6;
+          line-height: 1.5;
+          margin: 0 0 15px 0;
+        }
+
+        /* Large neon brand labels from design background */
+        .brand-display {
+          font-size: 22px;
+          font-weight: 800;
+          color: #ff63b4;
+          text-shadow: 0 0 8px rgba(211, 19, 114, 0.3);
+          font-family: monospace;
+        }
+
+        .tech-string {
+          font-size: 11px;
+          color: #7d84b2;
+          font-family: monospace;
+        }
+      </style>
+
+      <div class="container">
+        <div class="nav-bar">
+          <div class="nav-btn">💼 Portfolio Website</div>
+          <div class="nav-btn">🔗 LinkedIn Profile</div>
+          <div class="nav-btn">✉️ Email Inbox</div>
+        </div>
+
+        <div class="hero">
+          <div class="hero-left">
+            <div class="status-badge">Available for Internship &amp; Opportunities</div>
+            <h1>Hello, I'm <span>Amara THORNG</span></h1>
+            <div class="tagline">Information &amp; Communication Technology Student — Software Engineering</div>
+            <p class="desc">I build tech that works for people. From web apps to databases and cloud solutions, I turn ideas into practical, user-friendly projects. Always curious, I love exploring new systems to create real-world impact.</p>
+            
+            <div class="stats-grid">
+              <div class="stat-card"><div class="stat-val">6+</div><div class="stat-lbl">Projects</div></div>
+              <div class="stat-card"><div class="stat-val">100%</div><div class="stat-lbl">AMT Scholarship</div></div>
+              <div class="stat-card"><div class="stat-val">20+</div><div class="stat-lbl">Technologies</div></div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="speech-bubble">True developer mode active! 💻✨</div>
+            <img class="avatar-glow" src="https://github.com/Amara273.png" alt="Amara THORNG"/>
+          </div>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="section-header">🛠️ Technical Highlight Ecosystem</div>
+          <div class="skills-container">
+            <div class="desc">🛡️ Core Competencies &amp; Environments stack managed dynamically:</div>
+            <div class="pill-group">
+              <div class="pill">Python</div><div class="pill">JavaScript</div><div class="pill">Java</div>
+              <div class="pill">Node.js</div><div class="pill">Express.js</div><div class="pill">Django</div>
+              <div class="pill">React</div><div class="pill">FastAPI</div><div class="pill">MySQL</div>
+              <div class="pill">MongoDB</div><div class="pill">PostgreSQL</div><div class="pill">Supabase</div>
+              <div class="pill">AWS</div><div class="pill">Docker</div><div class="pill">Tailwind CSS</div>
+              <div class="pill">Figma Prototyping</div>
+            </div>
+          </div>
+
+          <div class="section-header">🎯 Interactive Focus Matrix</div>
+        </div>
+
+        <div class="focus-matrix">
+          
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">My Writing</div>
+              <div class="quad-tag">Read</div>
+            </div>
+            <p class="quad-desc">Documenting insights about full-stack engineering, secure backend development architecture, and optimized query mapping pipelines.</p>
+            <div class="quad-top">
+              <div class="brand-display">DEV</div>
+              <div class="tech-string">React // Node.js</div>
+            </div>
+          </div>
+
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">A11y Monsters</div>
+              <div class="quad-tag">Study</div>
+            </div>
+            <p class="quad-desc">Collaborative engineering cohorts built to accelerate technical fluency from groundwork fundamentals right up to production deployment benchmarks.</p>
+            <div class="quad-top">
+              <div class="brand-display">👾👾</div>
+              <div class="tech-string">FastAPI // Python</div>
+            </div>
+          </div>
+
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">WCAG 101</div>
+              <div class="quad-tag">Learn</div>
+            </div>
+            <p class="quad-desc">Demystifying compliance standards, implementing clean accessibility trees, semantic structural layouts, and high-quality validation rules.</p>
+            <div class="quad-top">
+              <div class="brand-display">w3c 101</div>
+              <div class="tech-string">PostgreSQL // SQL</div>
+            </div>
+          </div>
+
+          <div class="quadrant">
+            <div class="quad-top">
+              <div class="quad-title">totally1y.dev</div>
+              <div class="quad-tag">Grow</div>
+            </div>
+            <p class="quad-desc">Production system scaling solutions providing automated evaluation metrics, actionable audit feedback tools, and continuous integration diagnostics.</p>
+            <div class="quad-top">
+              <div class="brand-display">tota11y.dev</div>
+              <div class="tech-string">Docker // AWS</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </foreignObject>
+</svg>
