@@ -1,8 +1,8 @@
-<svg fill="none" viewBox="0 0 900 1340" width="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 900 1200" width="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        /* Cyberpunk Smooth Glow & Translation Animations */
+        /* Cyberpunk Smooth Glow Animations */
         @keyframes pulseGlow {
           0% { box-shadow: 0 0 8px rgba(211, 19, 114, 0.15); }
           50% { box-shadow: 0 0 22px rgba(211, 19, 114, 0.45); border-color: #ff63b4; }
@@ -29,7 +29,7 @@
           box-sizing: border-box;
           border-radius: 12px;
           border: 1px solid #1f2030;
-          height: 1340px;
+          height: 1200px;
         }
 
         /* Top Navigation Header Link Buttons */
@@ -53,20 +53,16 @@
           letter-spacing: 0.5px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .nav-btn img {
+        .nav-btn svg {
           width: 16px;
           height: 16px;
-          filter: invert(32%) sepia(91%) saturate(3015%) hue-rotate(314deg) brightness(98%) contrast(101%);
-          transition: all 0.3s ease;
+          fill: currentColor;
         }
         .nav-btn:hover {
           background: rgba(211, 19, 114, 0.2);
           transform: translateY(-2px);
           box-shadow: 0 0 15px #d31372;
           color: #ffffff;
-        }
-        .nav-btn:hover img {
-          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
         }
 
         /* Banner Block Content Segment */
@@ -128,7 +124,7 @@
           letter-spacing: 1px;
         }
 
-        /* Real Icon-Driven Skill Layout Matrix */
+        /* Skill Layout Matrix */
         .skills-matrix {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -161,49 +157,81 @@
           gap: 8px;
         }
 
-        /* Clean Real-Icon Badge Architecture */
+        /* Brand Color Badge System */
         .tech-badge {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          background: #181926;
-          border: 1px solid #252844;
-          padding: 8px 14px;
-          border-radius: 6px;
+          display: inline-block;
+          padding: 6px 12px;
+          border-radius: 4px;
           font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-          font-size: 13px;
-          font-weight: 600;
-          color: #b4b9e6;
+          font-size: 12px;
+          font-weight: 700;
+          color: #ffffff;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
           transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .tech-badge img {
-          width: 16px;
-          height: 16px;
-          object-fit: contain;
-        }
         
-        /* Interactive State: Changes background, text, border color and adds intense glow */
         .tech-badge:hover {
-          transform: translateY(-4px);
-          color: #ffffff;
-          border-color: #ff63b4;
-          background: rgba(211, 19, 114, 0.1);
-          box-shadow: 0 0 15px rgba(211, 19, 114, 0.4);
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px rgba(211, 19, 114, 0.3);
+          filter: brightness(1.2);
         }
+
+        /* Core Brand Background Definitions */
+        .b-java { background: #ea2d2e; }
+        .b-html5 { background: #e34f26; }
+        .b-js { background: #f7df1e; color: #000000; }
+        .b-ts { background: #3178c6; }
+        .b-python { background: #3776ab; }
+        .b-tw { background: #06b6d4; }
+        .b-figma { background: #f24e1e; }
+        
+        .b-express { background: #333333; border: 1px solid #555; }
+        .b-fastapi { background: #05998b; }
+        .b-flask { background: #222222; }
+        .b-django { background: #092e20; }
+        .b-jwt { background: #d63aff; }
+        .b-node { background: #339933; }
+        .b-next { background: #111111; border: 1px solid #333; }
+        .b-npm { background: #cb3837; }
+        .b-react { background: #20232a; color: #61dafb; }
+
+        .b-postgres { background: #336791; }
+        .b-supabase { background: #3ecf8e; color: #111111; }
+        .b-mongo { background: #47a248; }
+        .b-mysql { background: #00758f; }
+        .b-prisma { background: #0c344b; }
+
+        .b-matplotlib { background: #11557c; }
+        .b-numpy { background: #013243; }
+        .b-pandas { background: #150458; }
+        .b-tf { background: #ff6f00; }
+        .b-torch { background: #ee4c2c; }
+        .b-sklearn { background: #f7931e; }
+        .b-pb { background: #f2c811; color: #000000; }
+
+        .b-aws { background: #ff9900; color: #111111; }
+        .b-docker { background: #2496ed; }
+        .b-render { background: #46e3b7; color: #111111; }
+        .b-cloudflare { background: #f38020; }
+        .b-github { background: #24292e; }
+        .b-git { background: #f05032; }
+        .b-postman { background: #ff6c37; }
+        .b-cmake { background: #064f8a; }
       </style>
 
       <div class="container">
         <div class="nav-bar">
           <div class="nav-btn">
-            <img src="https://cdn.simpleicons.org/browser" alt="Portfolio"/>
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             Portfolio Website
           </div>
           <div class="nav-btn">
-            <img src="https://cdn.simpleicons.org/linkedin" alt="LinkedIn"/>
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
             LinkedIn Profile
           </div>
           <div class="nav-btn">
-            <img src="https://cdn.simpleicons.org/gmail" alt="Email"/>
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             Email Inbox
           </div>
         </div>
@@ -222,174 +250,66 @@
           <div class="skill-category-card">
             <div class="category-title">Languages &amp; Presentation</div>
             <div class="badge-list">
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/>
-                Java
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/>
-                HTML5
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-                JavaScript
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"/>
-                TypeScript
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
-                Python
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS"/>
-                TailwindCSS
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>
-                Figma
-              </div>
+              <div class="tech-badge b-java">Java</div>
+              <div class="tech-badge b-html5">HTML5</div>
+              <div class="tech-badge b-js">JavaScript</div>
+              <div class="tech-badge b-ts">TypeScript</div>
+              <div class="tech-badge b-python">Python</div>
+              <div class="tech-badge b-tw">TailwindCSS</div>
+              <div class="tech-badge b-figma">Figma</div>
             </div>
           </div>
 
           <div class="skill-category-card">
             <div class="category-title">Frameworks &amp; Runtimes</div>
             <div class="badge-list">
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" style="filter: invert(100%)" alt="Express.js"/>
-                Express.js
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"/>
-                FastAPI
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" style="filter: invert(100%)" alt="Flask"/>
-                Flask
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" style="filter: invert(45%) sepia(34%) saturate(933%) hue-rotate(110deg) brightness(93%) contrast(98%)" alt="Django"/>
-                Django
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/jwt/d63aff" alt="JWT"/>
-                JWT
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
-                Node.js
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" style="filter: invert(100%)" alt="Next.js"/>
-                Next.js
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM"/>
-                NPM
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
-                React
-              </div>
+              <div class="tech-badge b-express">Express.js</div>
+              <div class="tech-badge b-fastapi">FastAPI</div>
+              <div class="tech-badge b-flask">Flask</div>
+              <div class="tech-badge b-django">Django</div>
+              <div class="tech-badge b-jwt">JWT</div>
+              <div class="tech-badge b-node">Node.js</div>
+              <div class="tech-badge b-next">Next.js</div>
+              <div class="tech-badge b-npm">NPM</div>
+              <div class="tech-badge b-react">React</div>
             </div>
           </div>
 
           <div class="skill-category-card">
             <div class="category-title">Databases &amp; Adapters</div>
             <div class="badge-list">
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/>
-                PostgreSQL
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase"/>
-                Supabase
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/>
-                MongoDB
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
-                MySQL
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/prisma/ffffff" alt="Prisma"/>
-                Prisma
-              </div>
+              <div class="tech-badge b-postgres">PostgreSQL</div>
+              <div class="tech-badge b-supabase">Supabase</div>
+              <div class="tech-badge b-mongo">MongoDB</div>
+              <div class="tech-badge b-mysql">MySQL</div>
+              <div class="tech-badge b-prisma">Prisma</div>
             </div>
           </div>
 
           <div class="skill-category-card">
             <div class="category-title">Data Science &amp; Pipelines</div>
             <div class="badge-list">
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/matplotlib/11557c" alt="Matplotlib"/>
-                Matplotlib
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"/>
-                NumPy
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/>
-                Pandas
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"/>
-                TensorFlow
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/pytorch/ee4c2c" alt="PyTorch"/>
-                PyTorch
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-Learn"/>
-                Scikit-Learn
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/powerbi/f2c811" alt="Power BI"/>
-                Power BI
-              </div>
+              <div class="tech-badge b-matplotlib">Matplotlib</div>
+              <div class="tech-badge b-numpy">NumPy</div>
+              <div class="tech-badge b-pandas">Pandas</div>
+              <div class="tech-badge b-tf">TensorFlow</div>
+              <div class="tech-badge b-torch">PyTorch</div>
+              <div class="tech-badge b-sklearn">Scikit-Learn</div>
+              <div class="tech-badge b-pb">Power BI</div>
             </div>
           </div>
 
           <div class="skill-category-card" style="grid-column: span 2;">
             <div class="category-title">Cloud Infrastructure, Automation &amp; Versioning</div>
             <div class="badge-list">
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"/>
-                AWS
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"/>
-                Docker
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/render/46e3b7" alt="Render"/>
-                Render
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/cloudflare/f38020" alt="Cloudflare"/>
-                Cloudflare
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="filter: invert(100%)" alt="GitHub"/>
-                GitHub
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
-                Git
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/postman/ff6c37" alt="Postman"/>
-                Postman
-              </div>
-              <div class="tech-badge">
-                <img src="https://cdn.simpleicons.org/cmake/064f8a" alt="CMake"/>
-                CMake
-              </div>
+              <div class="tech-badge b-aws">AWS</div>
+              <div class="tech-badge b-docker">Docker</div>
+              <div class="tech-badge b-render">Render</div>
+              <div class="tech-badge b-cloudflare">Cloudflare</div>
+              <div class="tech-badge b-github">GitHub</div>
+              <div class="tech-badge b-git">Git</div>
+              <div class="tech-badge b-postman">Postman</div>
+              <div class="tech-badge b-cmake">CMake</div>
             </div>
           </div>
 
